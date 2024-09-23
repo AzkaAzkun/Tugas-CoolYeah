@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aqua;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  height: 50vh;
+  width: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10%;
+  transition: all 0.5s ease;
+}
+
+.wrapper.form-register-active {
+  justify-content: flex-start;
+  width: 100vh;
+  height: 90vh;
+}
+
+.wrapper h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+  margin-top: -20px;
+  border: 2px solid red;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.wrapper.form-register-active h1 {
+  margin-top: 10px;
+}
+
+.wrapper .input-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.wrapper .input-box input {
+  height: 40px;
+  width: 50vh;
+  font-size: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.wrapper .input-box input:focus {
+  border-color: #a98a37;
+}
+
+.remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.remember-me label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.remember-me a {
+  text-decoration: none;
+  color: #2c8bc6;
+}
+
+.remember-me a:hover {
+  text-decoration: underline;
+  color: #3576de;
+}
+
+.submit-button input {
+  height: 40px;
+  width: 50vh;
+  background-color: #2c8bc6;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+.submit-button input:hover {
+  transform: translateY(-2px);
+  background-color: #3576de;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90vw;
+    height: auto;
+  }
+
+  .wrapper .input-box input,
+  .submit-button input {
+    width: 80vw;
+  }
+}
+
+.form-hidden {
+  display: none;
+}
+
+.form-active {
+  display: block;
+}
+
+.toggle-form p {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
