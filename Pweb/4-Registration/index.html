@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Registration</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="judul">Registrasi</h1>
+      <form action="">
+        <table class="name">
+          <tr class="firstname">
+            <td>Firstname</td>
+            <td><input type="text" name="firstname" required /></td>
+          </tr>
+          <tr class="middlename">
+            <td>Middlename</td>
+            <td><input type="text" name="middlename" required /></td>
+          </tr>
+          <tr class="lastname">
+            <td>Lastname</td>
+            <td><input type="text" name="lastname" required /></td>
+          </tr>
+          <tr class="course">
+            <td class="drop-down-title">Course</td>
+            <td>
+              <select name="Course">
+                <option value="PBO">PBO</option>
+                <option value="PWEB">PWEB</option>
+                <option value="KPPL">KPPL</option>
+              </select>
+            </td>
+          </tr>
+          <tr class="gender-form">
+            <td>Gender</td>
+            <td>
+              <label
+                ><input type="radio" name="gender" value="Laki-laki" />
+                Laki-laki</label
+              >
+              <label
+                ><input type="radio" name="gender" value="Perempuan" />
+                Perempuan</label
+              >
+            </td>
+          </tr>
+          <tr class="phone">
+            <td class="phone-title">Phone</td>
+            <td><input type="text" name="phone" required /></td>
+          </tr>
+          <tr class="address">
+            <td class="address-title">Address</td>
+            <td><input type="text" name="address" required /></td>
+          </tr>
+          <tr class="email">
+            <td class="email-title">Email</td>
+            <td><input type="email" name="email" required /></td>
+          </tr>
+          <tr class="password">
+            <td class="password-title">Password</td>
+            <td><input type="password" name="password" required /></td>
+          </tr>
+          <tr class="re-type-password">
+            <td class="re-type-password-title">Re-type Password</td>
+            <td><input type="password" name="retype_password" required /></td>
+          </tr>
+        </table>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
