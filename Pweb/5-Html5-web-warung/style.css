@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", system-ui;
+    background-color: #A8E6CE;
+}
+
+nav {
+    margin: 10px auto; /* Memusatkan nav secara horizontal */
+    display: flex; /* Menambahkan Flexbox */
+    justify-content: center; /* Memusatkan konten nav */
+    align-items: center;
+    width: 150vh;
+    font-size: 45px;
+    height: 10vh;
+    color: #090807; /* Warna teks */
+    border: 3px #A8E6CE inset;
+    box-shadow: 2px 10px 16px rgba(0, 0, 0, 0.2);
+    background-color: #FFE5D4; /* Background krem */
+    border-radius: 50px;
+    text-shadow: 2px 2px 5px rgba(57,123,26,0.42);
+}
+
+.hello-page{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    height: 90vh;
+
+}
+
+.hello-page h1 {
+    margin-top: 10vh;
+    font-size: 4rem;
+    color: #D7B49C;
+    text-shadow: 2px 4px 6px #090807;
+}
+
+.hello-page p{
+    color: #090807;
+    text-shadow: 2px 4px 6px #D7B49C;
+}
+
+.hello-page .foto-hello {
+    margin-top: 10vh;
+    background-color: #FFE5D4;
+    padding: 50px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out 0.1s;
+}
+
+.hello-page .foto-hello img {
+    width: 60vh;
+    height: auto;
+    border-radius: 50px;
+    object-fit: cover; /* Optional: to ensure image fills nicely inside the border */
+}
+
+.hello-page .foto-hello:hover {
+    transform: translateY(-1.1rem);
+}
+
+.wrapper{
+    margin-top: -10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.wrapper .judul{
+    font-size: 3.4rem;
+}
+
+.menu {
+    margin-top: -70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+    padding: 10vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.list-menu{
+    cursor: pointer;
+    background-color: #D7B49C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 40vh;
+    text-align: center;
+    height: 40vh;
+    box-shadow: 0px 8px 16px #090807;
+    transition: transform 0.5s ease-out 0.1s ;
+}
+
+.list-menu:hover {
+    transform: translateY(-1.1rem);
+}
+
+.list-menu img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-size: 2rem;
+    color: #090807;
+    margin-bottom: 10px;
+}
+
+.deskripsi {
+    margin: 8px;
+    color: #333;
+}
