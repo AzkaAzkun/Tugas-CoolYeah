@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(150, 223, 254);
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+    height: 30px;
+    width: 120vh;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    height: auto;
+    width: 120vh;
+}
+
+.wrap h1{
+    padding: 20px;
+}
+
+.wrap p{
+    margin: 20px;
+}
+
+.thumbnail img{
+    height: 60vh;
+    width: auto;
+    object-fit: cover;
+}
+
+.container{
+    height: 60vh;
+    width: 110vh;
+    padding: 30px;
+}
+
+.list {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px black solid;
+    width: 30vw; /* Disesuaikan menggunakan vw (viewport width) */
+    height: 50vh;
+    margin-bottom: 100px;
+    background-color: rgb(175, 175, 175);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.list:hover {
+    background-color: rgba(175, 175, 175, 0.5);
+}
+
+.list img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border: 2px black solid;
+}
+
+.list p{
+    color: black;
+    text-align: center;
+}
