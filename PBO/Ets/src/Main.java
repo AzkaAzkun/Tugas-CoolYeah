@@ -6,7 +6,6 @@ public class Main {
         customer.addDeposit(50000);
         customer.withdraw(10000);
         customer.withdraw(50000);
-
         customer.deposit();
     }
 }
