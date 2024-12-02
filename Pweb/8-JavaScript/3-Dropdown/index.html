@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Dropdown List</title>
+  </head>
+  <body>
+    <h1>Pilih Provinsi</h1>
+
+    <label for="provinsi">Provinsi:</label>
+    <select name="provinsi" id="provinsi">
+      <option value="">Pilih Provinsi</option>
+    </select>
+
+    <label for="kabupaten">Kabupaten/Kota:</label>
+    <select name="kabupaten" id="kabupaten">
+      <option value="">Pilih Kabupaten/Kota</option>
+    </select>
+
+    <button onclick="show()">Tampilkan Pilihan</button>
+
+    <div id="selection"></div>
+
+    <script>
+      const data = {
+        "Jawa Timur": ["Surabaya", "Malang", "Sidoarjo"],
+        "DKI Jakarta": ["Jakarta Pusat", "Jakarta Selatan", "Jakarta Timur"],
+        Bali: ["Denpasar", "Badung", "Gianyar"],
+      };
+
+      const provinsiSelect = document.getElementById("provinsi");
+      const kabupatenSelect = document.getElementById("kabupaten");
+      const selectionDiv = document.getElementById("selection");
+
+      Object.keys(data).forEach((provinsi) => {
+        const option = document.createElement("option");
+        option.value = provinsi;
+        option.textContent = provinsi;
+        provinsiSelect.appendChild(option);
+      });
+
+      provinsiSelect.addEventListener("change", () => {
+        kabupatenSelect.innerHTML =
+          '<option value="">Pilih Kabupaten/Kota</option>';
+
+        const selectedProvinsi = provinsiSelect.value;
+
+        if (selectedProvinsi) {
+          const kabupatenList = data[selectedProvinsi];
+          kabupatenList.forEach((kabupaten) => {
+            const option = document.createElement("option");
+            option.value = kabupaten;
+            option.textContent = kabupaten;
+            kabupatenSelect.appendChild(option);
+          });
+        }
+      });
+
+      function show() {
+        const provinsi = provinsiSelect.value;
+        const kabupaten = kabupatenSelect.value;
+
+        if (provinsi && kabupaten) {
+          selectionDiv.textContent = `Anda memilih Provinsi: ${provinsi}, Kabupaten/Kota: ${kabupaten}`;
+        } else {
+          selectionDiv.textContent =
+            "Pastikan Anda memilih provinsi dan kabupaten/kota";
+        }
+      }
+    </script>
+  </body>
+</html>
