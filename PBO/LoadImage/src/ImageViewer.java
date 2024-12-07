@@ -53,7 +53,7 @@ public class ImageViewer {
                 }
             }
         });
-        
+
         frame.setVisible(true);
     }
 }
