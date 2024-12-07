@@ -2,7 +2,7 @@
 
 $host = 'localhost';
 $user = 'root';
-$password = 'AzkunDb151004_';
+$password = '';
 $dbname = 'pendaftaran_siswa';
 
 // Koneksi ke database
